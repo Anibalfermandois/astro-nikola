@@ -1,0 +1,50 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+	<div class="container mx-auto px-4 py-12">
+		<div class="max-w-4xl mx-auto">
+			<div class="prose prose-lg max-w-none">
+				<h1 class="gradient-text">{frontmatter.title.split(' - ')[0]}</h1>
+				<slot />
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style is:global>
+	.prose h1 {
+		@apply text-4xl md:text-5xl font-bold mb-8;
+	}
+	
+	.prose h2 {
+		@apply text-3xl font-bold text-primary mt-12 mb-6;
+	}
+	
+	.prose h3 {
+		@apply text-2xl font-semibold text-primary mt-8 mb-4;
+	}
+	
+	.prose p {
+		@apply text-gray-600 leading-relaxed mb-6;
+	}
+	
+	.prose ul {
+		@apply space-y-2 my-6;
+	}
+	
+	.prose li {
+		@apply text-gray-600;
+	}
+	
+	.prose strong {
+		@apply text-primary font-semibold;
+	}
+	
+	.prose blockquote {
+		@apply border-l-4 border-accent pl-4 italic text-gray-600;
+	}
+</style> 

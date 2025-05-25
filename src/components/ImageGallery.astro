@@ -1,0 +1,95 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
+  <!-- Local Images -->
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="/pexels-markusspiske-10390893.jpg" 
+      alt="Solar Panel Installation" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Residential Installation</h3>
+        <p class="text-sm text-gray-200">High-efficiency panels for homes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="/Imagen Nikola-15 2.png" 
+      alt="Solar Technology" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Advanced Technology</h3>
+        <p class="text-sm text-gray-200">Next-gen solar solutions</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="/Fondo-banner-scotia.webp" 
+      alt="Solar Energy" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Clean Energy Future</h3>
+        <p class="text-sm text-gray-200">Sustainable power solutions</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Web Images -->
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Solar Panels on Modern Home" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Modern Home Integration</h3>
+        <p class="text-sm text-gray-200">Seamless design solutions</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Commercial Solar Installation" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Commercial Solutions</h3>
+        <p class="text-sm text-gray-200">Large-scale installations</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
+    <img 
+      src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Solar Installation Team" 
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Expert Installation</h3>
+        <p class="text-sm text-gray-200">Professional team at work</p>
+      </div>
+    </div>
+  </div>
+</div> 

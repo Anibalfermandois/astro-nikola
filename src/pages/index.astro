@@ -1,11 +1,213 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button';
+import ImageGallery from '../components/ImageGallery.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="SolarPro - Solar Panel Solutions for Your Home">
+	<!-- Hero Section -->
+	<section class="relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
+		<div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+		<div class="absolute inset-0">
+			<div class="absolute top-0 left-1/4 w-96 h-96 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+			<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-light/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+		</div>
+		<div class="container mx-auto px-4 py-24 md:py-32 relative">
+			<div class="grid md:grid-cols-2 gap-12 items-center">
+				<div class="text-center md:text-left">
+					<h1 class="animate-fade-in text-white mb-6">
+						Power Your Home with <span class="text-accent">Solar Energy</span>
+					</h1>
+					<p class="animate-slide-up text-xl md:text-2xl text-gray-200 mb-8">
+						Transform your home into a sustainable powerhouse with our cutting-edge solar solutions.
+					</p>
+					<div class="animate-slide-up flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+						<Button client:load variant="accent" className="text-lg px-8 py-4">Get Free Quote</Button>
+						<Button client:load className="text-lg px-8 py-4 bg-white text-primary hover:bg-gray-100">Learn More</Button>
+					</div>
+				</div>
+				<div class="hidden md:block relative">
+					<div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+						<img 
+							src="/Imagen Nikola-15 2.png" 
+							alt="Solar Panel Installation" 
+							class="w-full h-auto"
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+	</section>
+
+	<!-- Benefits Section -->
+	<section class="section relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
+		<div class="container relative">
+			<h2 class="text-center mb-16">Why Choose Solar Energy?</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="card group">
+					<div class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-center text-xl font-semibold mb-4">Save on Energy Bills</h3>
+					<p class="text-center text-gray-600">Reduce your monthly energy costs significantly with solar power.</p>
+				</div>
+				<div class="card group">
+					<div class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+						</svg>
+					</div>
+					<h3 class="text-center text-xl font-semibold mb-4">Eco-Friendly Choice</h3>
+					<p class="text-center text-gray-600">Help protect the environment by reducing your carbon footprint.</p>
+				</div>
+				<div class="card group">
+					<div class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+						</svg>
+					</div>
+					<h3 class="text-center text-xl font-semibold mb-4">Increase Home Value</h3>
+					<p class="text-center text-gray-600">Solar installations can significantly increase your property value.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Projects -->
+	<section class="section relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
+		<div class="container relative">
+			<h2 class="text-center mb-4">Featured Projects</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+				Explore our recent solar installations and see how we're helping homeowners and businesses transition to clean energy.
+			</p>
+			<ImageGallery />
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="section relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-gray-50/80 via-white to-gray-50/80"></div>
+		<div class="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+		<div class="container relative">
+			<div class="grid md:grid-cols-4 gap-8 text-center">
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">2.5GW</div>
+					<p class="text-gray-600">Power Generated</p>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">40K+</div>
+					<p class="text-gray-600">Trees Saved</p>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">1.8K</div>
+					<p class="text-gray-600">CO₂ Reduction (tons)</p>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">390</div>
+					<p class="text-gray-600">Cars Equivalent</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="section relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
+		<div class="absolute inset-0">
+			<div class="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+			<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-light/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+		</div>
+		<div class="container relative">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-white mb-6">Ready to Switch to Solar?</h2>
+				<p class="text-xl text-gray-200 mb-8">
+					Join thousands of homeowners who have already made the switch to clean, renewable energy.
+				</p>
+				<Button client:load variant="accent" className="text-lg px-8 py-4">
+					Get Your Free Quote Today
+				</Button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section class="section relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white"></div>
+		<div class="container relative">
+			<h2 class="text-center mb-16">What Our Customers Say</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="card">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+							<span class="text-xl font-bold text-primary">M</span>
+						</div>
+						<div>
+							<h4 class="font-semibold">Martinez Family</h4>
+							<p class="text-sm text-gray-500">San Francisco</p>
+						</div>
+					</div>
+					<p class="text-gray-600">
+						"Since installing solar panels with SolarPro, our monthly electricity bill has dropped from $280 to just $15. The installation was smooth, and the team was professional throughout the process."
+					</p>
+				</div>
+				<div class="card">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+							<span class="text-xl font-bold text-primary">C</span>
+						</div>
+						<div>
+							<h4 class="font-semibold">Chen Residence</h4>
+							<p class="text-sm text-gray-500">Pacific Heights</p>
+						</div>
+					</div>
+					<p class="text-gray-600">
+						"We were concerned about the aesthetics of solar panels on our historic home. SolarPro's design team created a custom layout that preserved our home's character while maximizing energy production."
+					</p>
+				</div>
+				<div class="card">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+							<span class="text-xl font-bold text-primary">J</span>
+						</div>
+						<div>
+							<h4 class="font-semibold">Johnson's Smart Home</h4>
+							<p class="text-sm text-gray-500">Silicon Valley</p>
+						</div>
+					</div>
+					<p class="text-gray-600">
+						"Our goal was to create a fully sustainable home. SolarPro helped us achieve net-zero energy consumption with a combination of solar panels, battery storage, and smart energy management."
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	.animation-delay-2000 {
+		animation-delay: 2s;
+	}
+
+	.card {
+		@apply relative overflow-hidden backdrop-blur-sm bg-white/80;
+	}
+
+	.card::before {
+		content: '';
+		@apply absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity duration-300;
+	}
+
+	.card:hover::before {
+		@apply opacity-100;
+	}
+</style>
