@@ -1,4 +1,9 @@
 ---
+  import { Image } from 'astro:assets';
+  import imgAlto from '../assets/fondoALto.png'
+  import Pexel from '../assets/pexels-markusspiske-10390893.jpg'
+  import imgBanner from '../assets/Fondo-banner-scotia.webp'
+
 interface Props {
   className?: string;
 }
@@ -9,8 +14,8 @@ const { className = "" } = Astro.props;
 <div class={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
   <!-- Local Images -->
   <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
-    <img 
-      src="/pexels-markusspiske-10390893.jpg" 
+    <Image 
+      src={Pexel}
       alt="Solar Panel Installation" 
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
     />
@@ -23,8 +28,8 @@ const { className = "" } = Astro.props;
   </div>
 
   <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
-    <img 
-      src="/Imagen Nikola-15 2.png" 
+    <Image 
+      src={imgAlto}
       alt="Solar Technology" 
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       loading="lazy"
@@ -38,8 +43,8 @@ const { className = "" } = Astro.props;
   </div>
 
   <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
-    <img 
-      src="/Fondo-banner-scotia.webp" 
+    <Image 
+      src={imgBanner}
       alt="Solar Energy" 
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
     />
@@ -53,8 +58,8 @@ const { className = "" } = Astro.props;
 
   <!-- Additional Web Images -->
   <div class="group relative overflow-hidden rounded-xl aspect-[4/3]">
-    <img 
-      src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+    <img
+      src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Solar Panels on Modern Home" 
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
     />

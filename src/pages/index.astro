@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button';
 import ImageGallery from '../components/ImageGallery.astro';
-
+import { Image } from 'astro:assets';
+import img from '../assets/fondoALto.png'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -32,8 +33,8 @@ import ImageGallery from '../components/ImageGallery.astro';
 				</div>
 				<div class="hidden md:block relative">
 					<div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-						<img 
-							src="/Imagen Nikola-15 2.png" 
+						<Image 
+							src={img}
 							alt="Solar Panel Installation" 
 							class="w-full h-auto"
 							loading="lazy"
